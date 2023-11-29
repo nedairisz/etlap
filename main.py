@@ -27,7 +27,7 @@ etlap.cim("JÓ ÉTVÁGYAT!", etlap_meret)
 import rendeles
 valasztott = rendeles.rendeles(kerdes_leves)
 print(valasztott)
-
+print(leves[valasztott])
 
 
 
