@@ -30,9 +30,6 @@ def rendeles(l1, l1_ar, l2, l2_ar, f1, f1_ar, f2, f2_ar):
 
 
 
-kerdes_leves: list = ["Kér levest I/N?: ", "Melyik levest kéri 1/2 ? "]
-kerdes_foetel: list = ["Kér főételt I/N?: ", "Melyik főételt kéri 1/2 ? "]
-
 def rendeles(kerdes):
     valasztott: list = []
     ker: str = input(kerdes[0])
@@ -44,6 +41,10 @@ def rendeles(kerdes):
         while not(melyik== "1" or melyik== "2"):
             print("Hiba! Csak 1/2 válasz adható!")
             melyik: int = int(input(kerdes[1]))
-        print([melyik-1])
+        valasztott.append(int(melyik) - 1)
+    elif ker == "N":
+        print(kerdes[2])
+        return None
+    
+    return int(melyik) - 1
 
-    return melyik-1
